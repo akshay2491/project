@@ -1,0 +1,60 @@
+<html>
+	<head>	
+			<link rel="stylesheet" href="calci.css">
+			<title>My Calculator</title>
+			<script language="javascript">
+		function r(val)
+{
+document.getElementById("d").value=val;
+}
+function w(val)
+{
+document.getElementById("d").value+=val;
+}
+function calculate() 
+{ 
+try 
+{ 
+  r(eval(document.getElementById("d").value)) 
+} 
+catch(e) 
+{
+  r('Error') 
+} 
+}  
+
+</script>
+	</head>
+		<body>
+			<div id="container">
+				
+				<div id="screen">
+					<input type="text" id="d" class="mp"/> 
+				</div>
+				<div id="buttonPad">
+					<form >
+					<input type="button" id="buttons" value="1" onclick='w("1")'/>
+					<input type="button" id="buttons" value="2" onclick="w(this.value)"/>
+					<input type="button" id="buttons" value="3" onclick='w(this.value)'/>
+					<input type="button" id="but" value="+" onclick='w(this.value)'/>
+
+					<input type="button" id="buttons" value="4" onclick='w(this.value)'/>
+					<input type="button" id="buttons" value="5" onclick='w(this.value)'/>
+					<input type="button" id="buttons" value="6" onclick='w(this.value)'/>
+					<input type="button" id="but" value="-" onclick='w(this.value)'/>
+
+					<input type="button" id="buttons" value="7" onclick='w(this.value)'/>
+					<input type="button" id="buttons" value="8" onclick='w(this.value)'/>
+					<input type="button" id="buttons" value="9" onclick='w(this.value)'/>
+					<input type="button" id="but" value="*" onclick='w(this.value)'/>
+
+					<input type="button" id="bu" value="C" onclick='r(" ")'/>
+					<input type="button" id="buttons" value="0" onclick='w(this.value)'/>
+					<input type="button" id="buttons" value="=" onclick="calculate()"/>
+					<input type="button" id="but" value="/" onclick='w(this.value)'/>
+					</form>
+				</div>	
+			</div>
+			
+		</body>
+</html>
