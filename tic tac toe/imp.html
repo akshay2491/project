@@ -1,0 +1,267 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="yo.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+var count=0;
+var win=0;
+		
+		var x=new Array(9);
+		var vr=0;
+$(document).ready(function(){
+	$("button").click(function(){
+	
+    /*$("#pic").animate({height:'320px',opacity:'0.4'},"slow");
+    $("#pic").animate({width:'350px',opacity:'0.8'},"slow");
+    $("#pic").animate({height:'200px',opacity:'0.4'},"slow");
+    $("#pic").animate({width:'150px',opacity:'0.8'},"slow");
+    $("#pic").animate({right:'120px'});*/
+
+    $("#1").animate({left:'590px'},"slow");
+    $("#1").animate({left:'150px'},"slow");
+
+    $("#1").animate({left:'390px'},"slow");
+    $("#2").animate({top:'150px'},"slow");
+    $("#3").animate({right:'785px'},"slow");
+    $("#4").animate({left:'390px'});
+    $("#5").animate({bottom:'565px'},"slow");
+    $("#5").animate({bottom:'250px'},"slow");
+    $("#5").animate({bottom:'395px'},"slow");
+    $("#6").animate({right:'785px'},"slow");
+    $("#7").animate({left:'390px'},"slow");
+    $("#8").animate({bottom:'210px'},"slow");
+    $("#8").animate({left:'210px'},"slow");
+    $("#8").animate({bottom:'500px'},"slow");
+    $("#8").animate({left:'610px'},"slow");
+    $("#8").animate({bottom:'210px'},"slow");
+    $("#8").animate({left:'450px'},"slow");
+    $("#8").animate({bottom:'339px'},"slow");
+    $("#9").animate({right:'785px'});
+
+    });
+
+
+   
+
+ 	
+});
+
+/*$(document).ready(function(){
+
+	$("#1").click(function(){*/
+		/*document.getElementById(1).innerHTML="X";
+});
+});*/
+
+$(document).ready(function() {
+ $('#first div').click(function(){
+  $.fn.myFunction(this.id);
+  /*alert(this.id);*/
+ });
+ $.fn.myFunction = function(param) { 
+     
+     
+     if(count%2==0)
+			{ 
+				
+				
+				
+				count++;
+				var ret=check(param,'x');
+				
+				if(ret)
+				{document.getElementById(param).innerHTML="X";
+			
+				process(param,1);
+
+				}
+				
+				
+				
+			}
+			else
+			{
+					
+					
+					count++;
+				var ret=check(param,'0');
+				
+				if(ret)
+				{
+				document.getElementById(param).innerHTML="0";
+				
+				process(param,0);
+				
+				
+				}
+				
+				
+				
+			}
+
+			
+		}
+		function process(n,dig)
+		{ 
+		  
+			if(dig==1)
+			{ 
+				x[--n]=1;
+				
+				display(dig);
+			}
+			else if(dig==0)
+			{
+				x[--n]=0;
+				
+				display(dig);
+			}
+			
+
+		}
+
+		function display(vr)
+			{	
+				var wx=0;
+				var wo=0;
+			for(var i=0;i<9;i++)
+			{  
+				if(i==0 ||i==3||i==6)
+				{ 
+					if(vr==1)
+					{ 
+				
+               			if(x[i]==1 && x[i+1]==1 && x[i+2]==1)
+                		{ 	
+                			win=1;
+                			wx=1;
+
+                		}
+                		if(x[i]==1 && x[i+3]==1 && x[i+6]==1)
+               			{
+               				win=1;
+               				wx=1;
+
+						}
+
+					}
+					else 
+					{ 
+               			if(x[i]==0 && x[i+1]==0 && x[i+2]==0)
+                		{ 			
+                			win=1;
+                			wo=1;
+                			
+                		}
+                		if(x[i]==0 && x[i+3]==0 && x[i+6]==0)
+               			{
+               				win=1;
+               				wo=1;
+						}
+					}
+
+			}
+		}
+			if(win==1)
+				{
+					if(wo==1)
+						{
+							alert("0 win");
+						}
+					if(wx==1)
+				{
+					alert("x wins");
+				}
+		}
+
+}
+
+function check(m,type)
+		{
+			var ret=1;
+		if(type=='x')
+		{
+			if(document.getElementById(m).innerHTML=="X")
+			{
+				document.getElementById(m).innerHTML="X";
+				ret=0;
+				
+			}
+			else if(document.getElementById(m).innerHTML=="0")
+			{
+				document.getElementById(m).innerHTML="0";
+				count--;
+				ret=0;
+				
+			}
+			
+
+		}
+		else if(type=='0')
+		{
+			if(document.getElementById(m).innerHTML=="X")
+			{
+				document.getElementById(m).innerHTML="X";
+				count--;
+				ret=0;
+				
+			}
+			else if(document.getElementById(m).innerHTML=="0")
+			{
+				document.getElementById(m).innerHTML="0";
+				
+				ret=0;
+				
+			}
+			
+
+		}
+		return ret;
+	}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ });
+
+
+		
+
+
+</script>
+	</head>
+	<body>
+		<div id="show" >TIC TAC TOE</div>
+		<button>click here to start</button>
+		
+		<!-- <center><img  id="pic" src="Penguins.jpg"></center> -->
+		<div id="first">
+		<div class="but" id="1" style="background:#98bf21;height:50px;width:50px;position:absolute; left:-100px; top:150px;"  ></div>
+		<div  class="but" id="2" style="background:#98bf21;height:50px;width:50px;position:absolute ;left:450px;top:-100px;"></div>
+		<div class="but" id="3" style="background:#98bf21;height:50px;width:50px;position:absolute; right:-100px; top:150px;"></div>
+		<div class="but" id="4" style="background:#98bf21;height:50px;width:50px;position:absolute ;left:-100px; top:205px;"></div>
+		<div  class="but" id="5" style="background:#98bf21;height:50px;width:50px;position:absolute;left:450px;bottom:-100px; "></div>
+		<div class="but" id="6" style="background:#98bf21;height:50px;width:50px;position:absolute ;right:-100px; top:205px;"></div>
+		<div class="but"  id="7" style="background:#98bf21;height:50px;width:50px;position:absolute; left:-100px; top:260px;"></div>
+		<div class="but" id="8" style="background:#98bf21;height:50px;width:50px;position:absolute; left:450px;bottom:-100px;"></div>
+		<div class="but" id="9" style="background:#98bf21;height:50px;width:50px;position:absolute; right:-100px; top:260px;"></div>
+</div>
+
+	</body>
+</html>
+
+
+
