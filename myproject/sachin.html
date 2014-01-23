@@ -10,7 +10,8 @@
     color: #666;
     background: #333;
     height: 450px !important;
-    border-top: 10px;
+
+    border-top: 20px;
     width: 100%
     display: block;
     font-size: 52px;
@@ -62,8 +63,33 @@ margin-left: 2%;
 	font-family: "Brush Script MT", cursive;
 	color: red;
 }
-
+body
+{
+    background-image: url(images/flag3.jpg);
+}
+.navbar-header .imgg
+{
+    
+}
 	
+.navbar-header img
+{   padding-right: 20px;
+    position:fixed;
+    top:50px;
+    left:230px;
+
+
+}
+ 
+    /*.navbar-header img .imgg
+    {   padding-right: 20px;
+        position:fixed;
+        background-image: url(images/1.jpg);
+        top:10px;
+        left:20px;
+
+
+    }*/
 </style>
 
 
@@ -74,6 +100,7 @@ margin-left: 2%;
 </head>
 
 <body>
+    <div img src="images/1.jpg" class="imgg" style="position:relative; top:0; left:0;height:10; width:10;"/>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	  <script src="js/bootstrap.js"></script>
 	  <div class="top">
@@ -108,10 +135,13 @@ margin-left: 2%;
 	  	</div>
 
 	  </div>
+      </div>
 	  <div class="header">
 	  	<div class="navbar navbar-default" role="navigation">
 	  		<div class="container">
+                
 	  			<div class="navbar-header">
+                    
 	  				<img id="logo" src="images/srt.jpg" alt="srt">
 
 	  					  			</div>
@@ -131,7 +161,7 @@ margin-left: 2%;
 	  		</div>
 	  	</div>
 
-	  </div>
+	  
 
 <div class="bs-example">
     <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
