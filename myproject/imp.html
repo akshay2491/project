@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Activate Twitter Bootstrap 3 Carousel via Data Attributes</title>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+
+<link rel="stylesheet" href="css/bootstrap.css"  type="text/css"/>
+<link rel="stylesheet" href="css/bootstrap.mini.css"  type="text/css"/>
+<style type="text/css">
+/*
+styling the alt text
+instead of including images.
+*/
+img{
+    color: #666;
+    background: #333;
+    height: 500px !important;
+    border-top: 10px;
+
+   /* padding-top: 90px;*/
+    display: block;
+    font-size: 52px;
+    text-align: center;    
+    font-family: "trebuchet ms", sans-serif;    
+}
+.bs-example{
+	margin: 10px;
+}
+
+</style>
+</head>
+<body>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <div class="top">
+        <div class="container">
+            <ul class="loginbar pull-right">
+                <li>
+                    <i class="glyphicon glyphicon-cloud">
+                    </i>
+                    <a>LANGUAGES</a>
+                    <!-- <ul class="lang">
+                        <li class="active">
+                            <a href="#" >ENGLISH
+                            <i class="glyphicon glyphicon-cloud">
+                            </i></a>
+                        </li>
+                        <li>
+                            <a href="#">Spanish</a>
+
+                        </li>
+                     --></li>
+                    <li class="divider"></li>
+                    <li>
+                    
+                    <a>SERVICES</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    
+                    <a>LOGIN</a>
+                </li>
+            </ul>
+        </div>
+
+      </div>
+      <div class="header">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <img id="logo" src="images/srt.jpg" alt="srt">
+
+                </div>
+                <div class="collapse navbar-collapse navbar-responsive-collapse">
+
+                    <div class="nav navbar-nav navbar-right">
+                         <li class="active"><a href="#">HOME</a></li>
+                    <li><a href="#">BIOGRAPHY</a></li>
+                    <li><a href="#">GALLERIES</a></li>
+                    <li><a href="#">MILESTONES</a></li>
+                    <li><a href="#">STATS</a></li>
+                    <li><a href="#">QUOTES</a></li>
+                    <li><a href="#">FAREWELL SPEECH</a></li>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+<div class="bs-example">
+    <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+        <!-- Carousel indicators -->
+ <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>  
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            
+            <div class="active item">
+                <img src="sachin/hd.png " width=100%  alt="Slide 2">
+                <div class="carousel-caption">
+                  <h3>Second slide label</h3>
+                  <p>Vestibulum quis quam ut magna consequat faucibus.</p>
+                </div>
+            </div>
+                
+          
+            <div class="item">
+                <img src="sachin/sa.jpg" width=100% alt="Slide 2">
+                <div class="carousel-caption">
+                  <h3>Second slide label</h3>
+                  <p>Vestibulum quis quam ut magna consequat faucibus.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="sachin/1.jpg" width=100% alt="Slide 3">
+                <div class="carousel-caption">
+                  <h3>Third slide label</h3>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+</body>
+</html> 
