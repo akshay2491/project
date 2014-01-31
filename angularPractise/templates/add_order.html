@@ -1,0 +1,28 @@
+
+form1
+<div class="container">
+	<br>
+	Name:
+	<br>
+	<input type="text" ng-model="filter.name">
+	<h1>{{filter.name}}</h1>
+	<br>
+	<ul>
+		<li ng-repeat="cust in customers|filter:filter.name">{{cust.name}}-{{cust.city}}
+		
+		  <button ng-click="delete(cust.id)">delete</button>
+		</li>
+	</ul>
+	Add new Customer
+	<br>
+	name:
+	<input type="text" ng-model="newCustomer.name">
+	<br><br>
+	city:
+	<input type="text" ng-model="newCustomer.city">
+	<br>
+	<input type="hidden" ng-model="newCustomer.id">
+	<button ng-click="addCust()" value="save">Add customer</button>
+	<a href="#/ShowOrders">page1</a>
+
+</div>
