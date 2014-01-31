@@ -1,9 +1,7 @@
-//Define an angular module for our app
+
 var sampleApp = angular.module('sampleApp', []);
 
-//Define Routing for app
-//Uri /AddNewOrder -> template AddOrder.html and Controller AddOrderController
-//Uri /ShowOrders -> template ShowOrders.html and Controller AddOrderController
+
 sampleApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
