@@ -1,0 +1,237 @@
+
+		.contentBox
+		{
+			
+			width:120px;
+			height: 120px;
+				
+			
+		}
+
+		.flipwrapper
+		{	
+			perspective:1000;
+			float: left;
+			margin-right: 2px;
+			margin-left: 3px;
+			margin-top: 3px;
+			margin-bottom: 3px;
+
+		}
+		.flipwrapperCalender
+		{
+			perspective:1000;
+			
+			
+		}
+		.flipwrapperMed
+		{
+			perspective:1000;
+			float: left;
+			
+			margin-right: 3px;
+			margin-left: 4px;
+			margin-top: 3px;
+			margin-bottom: 3px;
+
+		}
+		.flipwrapperMedPic
+		{
+			perspective:1000;
+			float: left;
+			
+			margin-right: 3px;
+			margin-left: 4px;
+			margin-top: 3px;
+			margin-bottom: 3px;
+
+		}
+		.flipwrapper .flipper{
+			transition: 0.75s;
+			-webkit-transition: 0.75s;
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			position: relative;
+			top: 115px;
+			left: 285px;
+
+		}
+		.flipwrapperCalender .flipperCalender{
+			transition: 0.75s;
+			-webkit-transition: 0.75s;
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			position: relative;
+			top: 115px;
+			left: 285px;
+
+		}
+		.flipwrapperMed .flipperMed{
+			transition: 0.75s;
+			-webkit-transition: 0.75s;
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			position: relative;
+			top: 115px;
+			left: 285px;
+
+		}
+		.flipwrapperMedPic .flipperMedPic{
+			transition: 0.75s;
+			-webkit-transition: 0.75s;
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			position: relative;
+			top: 115px;
+			left: 285px;
+
+		}
+		.flipwrapper .flipper:hover
+		{
+			-webkit-transform :rotateY(180deg);
+		}
+		.flipwrapperCalender .flipperCalender:hover
+		{
+			-webkit-transform :rotateY(180deg);
+		}
+		.flipwrapperMed .flipperMed:hover
+		{
+			-webkit-transform :rotateY(180deg);
+		}
+		.flipwrapperMedPic .flipperMedPic:hover
+		{
+			-webkit-transform :rotateY(180deg);
+		}
+
+		.flipwrapper ,.flipwrapper .frontface, .flipwrapper .backface
+		{	
+			height: 24px;
+			width: 24px;
+		}
+		.flipwrapperCalender ,.flipwrapperCalender .frontfaceCalender, .flipwrapperCalender .backfaceCalender
+		{	
+			height: 50px;
+			width: 115px;
+		}
+		.flipwrapperMed	 ,.flipwrapperMed .frontfaceMed, .flipwrapperMed .backfaceMed
+		{	
+			height: 50px;
+			width: 50px;
+			
+
+		}
+		.flipwrapperMedPic	 ,.flipwrapperMedPic .frontfaceMedPic, .flipwrapperMedPic .backfaceMedPic
+		{	
+			height: 50px;
+			width: 50px;
+			
+
+		}
+		.frontfaceMed
+		{
+			font-size: 0.8em;
+			text-indent: inherit;
+			font-weight: 200;
+			color: white;
+			
+
+
+		}
+		.frontfaceMedPic
+		{
+			font-size: 0.7em;
+			text-indent: inherit;
+			font-weight: 200;
+			color: white;
+
+
+		}
+		.frontfaceCalender
+		{
+			font-size: 0.7em;
+			text-indent: inherit;
+			font-weight: 200;
+			color: white;
+				
+
+		}
+		.backfaceCalender
+		{
+			font-size: 0.7em;
+			text-indent: inherit;
+			font-weight: 200;
+			color: white;
+
+				
+
+		}
+		.flipwrapper .frontface, .flipwrapper .backface
+		{
+			background-color: blue;
+			position: absolute;
+			backface-visibility:hidden;
+					-webkit-backface-visibility:hidden;
+		}
+		.flipwrapperCalender .frontfaceCalender, .flipwrapperCalender .backfaceCalender
+		{
+			background-color: green;
+			position: absolute;
+			backface-visibility:hidden;
+					-webkit-backface-visibility:hidden;
+		}
+		.flipwrapperMed .frontfaceMed, .flipwrapperMed .backfaceMed
+		{
+			background-color: red;
+			position: absolute;
+			backface-visibility:hidden;
+					-webkit-backface-visibility:hidden;
+		}
+			.flipwrapperMedPic .frontfaceMedPic, .flipwrapperMedPic .backfaceMedPic
+		{
+			
+			position: absolute;
+			backface-visibility:hidden;
+					-webkit-backface-visibility:hidden;
+		}
+		.flipwrapper .frontface
+		{
+			z-index: 2;
+		}
+		.flipwrapperCalender .frontfaceCalender
+		{
+			z-index: 2;
+		}
+		.flipwrapperMed .frontfaceMed
+		{
+			z-index: 2;
+		}
+		.flipwrapperMedPic .frontfaceMedPic
+		{
+			z-index: 2;
+		}
+		.flipwrapper .backface
+		{
+			transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
+		}
+		.flipwrapperCalender .backfaceCalender
+		{
+			transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
+		}
+		.flipwrapperMed .backfaceMed
+		{
+			transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
+		}
+		.flipwrapperMedPic .backfaceMedPic
+		{
+			transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
+		}
+		body
+		{	
+			background: url('lumia.jpg') no-repeat;
+		}
+
+		
